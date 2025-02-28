@@ -1,9 +1,18 @@
-An example on how to make an API call from a remote JSON file and display it in a SwiftUI list. Using Xcode 12 and SwiftUI 2.0.
+# Argmax Coding Challenge
+## iOS Face Detection model
+## Vijay Reddy
 
-It's using the JSON placeholder available at the following link: 
-https://jsonplaceholder.typicode.com/users
+Project that detects faces using on-device model on iOS.  Used SwiftUI 5 and targets iOS 16+
 
+Project Instructions
+- Download project zip file directly or clone from https://github.com/vreddynyc/argmax-ios-model.git
+- Open project
+- Run on any device running iOS 16+
 
-Here how it look's like:
-
-![Screenshot](screenshot.jpg)
+Runtime Instructions
+- Upon running the app, a list of Stack Overflow Users will show
+- Each list item will show a user name and profile image
+- Below the profile image, a green text will read "Face Detected" if the on-device model detects a faces
+- Click on the profile image to see details
+- The details page will show the objects detected with respective confidence, or no objects if none were detected
+- A "Face Detected" profile image will have a "person" object with at least 95% confidence
