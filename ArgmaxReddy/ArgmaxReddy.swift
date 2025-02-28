@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct UserJSONApp: App {
+struct ArgmaxReddy: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

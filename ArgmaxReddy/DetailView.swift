@@ -2,7 +2,7 @@ import SwiftUI
 
 struct DetailView: View {
     
-    var selectedIndex: Int
+    private var selectedIndex: Int
     
     init(selectedIndex: Int) {
         self.selectedIndex = selectedIndex

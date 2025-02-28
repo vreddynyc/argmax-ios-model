@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var itemList: ItemList = ItemList(items: [])
-    @State private var showWelcomeView = false
+    @State private var showDetailView = false
         
     @State private var selectedIndex: Int = 0
     
@@ -19,18 +19,18 @@ struct ContentView: View {
                             ImageView(item: item, index: index)
                                 .onTapGesture {
                                     selectedIndex = index
-                                    showWelcomeView = true
+                                    showDetailView = true
                                 }
                             Spacer()
                                 .frame(height: 50)
                         }
                     }.onAppear {
-                        apiCall().getUsers { (itemList) in
+                        ViewModel().getItems { (itemList) in
                             self.itemList = itemList
                         }
                     }
                 }
-                .navigationDestination(isPresented: $showWelcomeView) {
+                .navigationDestination(isPresented: $showDetailView) {
                     DetailView(selectedIndex: selectedIndex)
                 }
             }

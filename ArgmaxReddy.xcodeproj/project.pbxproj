@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75A4B40F258B6B85009734F4 /* UserJSONApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B40E258B6B85009734F4 /* UserJSONApp.swift */; };
+		75A4B40F258B6B85009734F4 /* ArgmaxReddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B40E258B6B85009734F4 /* ArgmaxReddy.swift */; };
 		75A4B411258B6B85009734F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B410258B6B85009734F4 /* ContentView.swift */; };
 		75A4B413258B6B87009734F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A4B412258B6B87009734F4 /* Assets.xcassets */; };
 		75A4B416258B6B87009734F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A4B415258B6B87009734F4 /* Preview Assets.xcassets */; };
 		75A4B43D258B6EE7009734F4 /* itemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B43C258B6EE7009734F4 /* itemModel.swift */; };
-		75A4B442258B708D009734F4 /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B441258B708D009734F4 /* userViewModel.swift */; };
+		75A4B442258B708D009734F4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B441258B708D009734F4 /* ViewModel.swift */; };
 		96D42C752D6EC27800DACFE1 /* itemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D42C742D6EC27800DACFE1 /* itemListModel.swift */; };
 		96D42C772D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 96D42C762D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel */; };
 		96D42C7D2D70D6F700DACFE1 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D42C7C2D70D6F700DACFE1 /* ImageLoader.swift */; };
@@ -38,16 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		75A4B40B258B6B85009734F4 /* UserJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		75A4B40E258B6B85009734F4 /* UserJSONApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSONApp.swift; sourceTree = "<group>"; };
+		75A4B40B258B6B85009734F4 /* ArgmaxReddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArgmaxReddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A4B40E258B6B85009734F4 /* ArgmaxReddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgmaxReddy.swift; sourceTree = "<group>"; };
 		75A4B410258B6B85009734F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75A4B412258B6B87009734F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A4B415258B6B87009734F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75A4B417258B6B87009734F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75A4B41C258B6B88009734F4 /* UserJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75A4B427258B6B88009734F4 /* UserJSONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserJSONUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A4B41C258B6B88009734F4 /* ArgmaxReddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgmaxReddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A4B427258B6B88009734F4 /* ArgmaxReddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgmaxReddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4B43C258B6EE7009734F4 /* itemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemModel.swift; sourceTree = "<group>"; };
-		75A4B441258B708D009734F4 /* userViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
+		75A4B441258B708D009734F4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		96D42C742D6EC27800DACFE1 /* itemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListModel.swift; sourceTree = "<group>"; };
 		96D42C762D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3Int8LUT.mlmodel; path = ../../../../../Downloads/YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
 		96D42C7C2D70D6F700DACFE1 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		75A4B402258B6B85009734F4 = {
 			isa = PBXGroup;
 			children = (
-				75A4B40D258B6B85009734F4 /* UserJSON */,
+				75A4B40D258B6B85009734F4 /* ArgmaxReddy */,
 				75A4B40C258B6B85009734F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,22 +91,22 @@
 		75A4B40C258B6B85009734F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75A4B40B258B6B85009734F4 /* UserJSON.app */,
-				75A4B41C258B6B88009734F4 /* UserJSONTests.xctest */,
-				75A4B427258B6B88009734F4 /* UserJSONUITests.xctest */,
+				75A4B40B258B6B85009734F4 /* ArgmaxReddy.app */,
+				75A4B41C258B6B88009734F4 /* ArgmaxReddyTests.xctest */,
+				75A4B427258B6B88009734F4 /* ArgmaxReddyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		75A4B40D258B6B85009734F4 /* UserJSON */ = {
+		75A4B40D258B6B85009734F4 /* ArgmaxReddy */ = {
 			isa = PBXGroup;
 			children = (
 				96D42C762D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel */,
-				75A4B40E258B6B85009734F4 /* UserJSONApp.swift */,
+				75A4B40E258B6B85009734F4 /* ArgmaxReddy.swift */,
 				75A4B410258B6B85009734F4 /* ContentView.swift */,
 				75A4B43C258B6EE7009734F4 /* itemModel.swift */,
 				96D42C742D6EC27800DACFE1 /* itemListModel.swift */,
-				75A4B441258B708D009734F4 /* userViewModel.swift */,
+				75A4B441258B708D009734F4 /* ViewModel.swift */,
 				75A4B412258B6B87009734F4 /* Assets.xcassets */,
 				75A4B417258B6B87009734F4 /* Info.plist */,
 				75A4B414258B6B87009734F4 /* Preview Content */,
@@ -114,7 +114,7 @@
 				96D42C7E2D70D73700DACFE1 /* ImageView.swift */,
 				96D42C822D71E35E00DACFE1 /* DetailView.swift */,
 			);
-			path = UserJSON;
+			path = ArgmaxReddy;
 			sourceTree = "<group>";
 		};
 		75A4B414258B6B87009734F4 /* Preview Content */ = {
@@ -128,9 +128,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		75A4B40A258B6B85009734F4 /* UserJSON */ = {
+		75A4B40A258B6B85009734F4 /* ArgmaxReddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A4B430258B6B88009734F4 /* Build configuration list for PBXNativeTarget "UserJSON" */;
+			buildConfigurationList = 75A4B430258B6B88009734F4 /* Build configuration list for PBXNativeTarget "ArgmaxReddy" */;
 			buildPhases = (
 				75A4B407258B6B85009734F4 /* Sources */,
 				75A4B408258B6B85009734F4 /* Frameworks */,
@@ -140,14 +140,14 @@
 			);
 			dependencies = (
 			);
-			name = UserJSON;
+			name = ArgmaxReddy;
 			productName = UserJSON;
-			productReference = 75A4B40B258B6B85009734F4 /* UserJSON.app */;
+			productReference = 75A4B40B258B6B85009734F4 /* ArgmaxReddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		75A4B41B258B6B88009734F4 /* UserJSONTests */ = {
+		75A4B41B258B6B88009734F4 /* ArgmaxReddyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A4B433258B6B88009734F4 /* Build configuration list for PBXNativeTarget "UserJSONTests" */;
+			buildConfigurationList = 75A4B433258B6B88009734F4 /* Build configuration list for PBXNativeTarget "ArgmaxReddyTests" */;
 			buildPhases = (
 				75A4B418258B6B88009734F4 /* Sources */,
 				75A4B419258B6B88009734F4 /* Frameworks */,
@@ -158,14 +158,14 @@
 			dependencies = (
 				75A4B41E258B6B88009734F4 /* PBXTargetDependency */,
 			);
-			name = UserJSONTests;
+			name = ArgmaxReddyTests;
 			productName = UserJSONTests;
-			productReference = 75A4B41C258B6B88009734F4 /* UserJSONTests.xctest */;
+			productReference = 75A4B41C258B6B88009734F4 /* ArgmaxReddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		75A4B426258B6B88009734F4 /* UserJSONUITests */ = {
+		75A4B426258B6B88009734F4 /* ArgmaxReddyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75A4B436258B6B88009734F4 /* Build configuration list for PBXNativeTarget "UserJSONUITests" */;
+			buildConfigurationList = 75A4B436258B6B88009734F4 /* Build configuration list for PBXNativeTarget "ArgmaxReddyUITests" */;
 			buildPhases = (
 				75A4B423258B6B88009734F4 /* Sources */,
 				75A4B424258B6B88009734F4 /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				75A4B429258B6B88009734F4 /* PBXTargetDependency */,
 			);
-			name = UserJSONUITests;
+			name = ArgmaxReddyUITests;
 			productName = UserJSONUITests;
-			productReference = 75A4B427258B6B88009734F4 /* UserJSONUITests.xctest */;
+			productReference = 75A4B427258B6B88009734F4 /* ArgmaxReddyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 75A4B406258B6B85009734F4 /* Build configuration list for PBXProject "UserJSON" */;
+			buildConfigurationList = 75A4B406258B6B85009734F4 /* Build configuration list for PBXProject "ArgmaxReddy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,9 +217,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				75A4B40A258B6B85009734F4 /* UserJSON */,
-				75A4B41B258B6B88009734F4 /* UserJSONTests */,
-				75A4B426258B6B88009734F4 /* UserJSONUITests */,
+				75A4B40A258B6B85009734F4 /* ArgmaxReddy */,
+				75A4B41B258B6B88009734F4 /* ArgmaxReddyTests */,
+				75A4B426258B6B88009734F4 /* ArgmaxReddyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,8 +259,8 @@
 				96D42C832D71E35E00DACFE1 /* DetailView.swift in Sources */,
 				96D42C7D2D70D6F700DACFE1 /* ImageLoader.swift in Sources */,
 				75A4B411258B6B85009734F4 /* ContentView.swift in Sources */,
-				75A4B442258B708D009734F4 /* userViewModel.swift in Sources */,
-				75A4B40F258B6B85009734F4 /* UserJSONApp.swift in Sources */,
+				75A4B442258B708D009734F4 /* ViewModel.swift in Sources */,
+				75A4B40F258B6B85009734F4 /* ArgmaxReddy.swift in Sources */,
 				96D42C772D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel in Sources */,
 				96D42C752D6EC27800DACFE1 /* itemListModel.swift in Sources */,
 				75A4B43D258B6EE7009734F4 /* itemModel.swift in Sources */,
@@ -286,12 +286,12 @@
 /* Begin PBXTargetDependency section */
 		75A4B41E258B6B88009734F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A4B40A258B6B85009734F4 /* UserJSON */;
+			target = 75A4B40A258B6B85009734F4 /* ArgmaxReddy */;
 			targetProxy = 75A4B41D258B6B88009734F4 /* PBXContainerItemProxy */;
 		};
 		75A4B429258B6B88009734F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75A4B40A258B6B85009734F4 /* UserJSON */;
+			target = 75A4B40A258B6B85009734F4 /* ArgmaxReddy */;
 			targetProxy = 75A4B428258B6B88009734F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -421,16 +421,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"UserJSON/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ArgmaxReddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 3WCRRC9DJ3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UserJSON/Info.plist;
+				INFOPLIST_FILE = ArgmaxReddy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdeisgnandcode.UserJSON;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.argmax-reddy.face-detection-model";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,16 +443,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"UserJSON/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ArgmaxReddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 3WCRRC9DJ3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UserJSON/Info.plist;
+				INFOPLIST_FILE = ArgmaxReddy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdeisgnandcode.UserJSON;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.argmax-reddy.face-detection-model";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,7 +477,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UserJSON.app/UserJSON";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArgmaxReddy.app/ArgmaxReddy";
 			};
 			name = Debug;
 		};
@@ -499,7 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UserJSON.app/UserJSON";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArgmaxReddy.app/ArgmaxReddy";
 			};
 			name = Release;
 		};
@@ -546,7 +546,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		75A4B406258B6B85009734F4 /* Build configuration list for PBXProject "UserJSON" */ = {
+		75A4B406258B6B85009734F4 /* Build configuration list for PBXProject "ArgmaxReddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A4B42E258B6B88009734F4 /* Debug */,
@@ -555,7 +555,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A4B430258B6B88009734F4 /* Build configuration list for PBXNativeTarget "UserJSON" */ = {
+		75A4B430258B6B88009734F4 /* Build configuration list for PBXNativeTarget "ArgmaxReddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A4B431258B6B88009734F4 /* Debug */,
@@ -564,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A4B433258B6B88009734F4 /* Build configuration list for PBXNativeTarget "UserJSONTests" */ = {
+		75A4B433258B6B88009734F4 /* Build configuration list for PBXNativeTarget "ArgmaxReddyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A4B434258B6B88009734F4 /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75A4B436258B6B88009734F4 /* Build configuration list for PBXNativeTarget "UserJSONUITests" */ = {
+		75A4B436258B6B88009734F4 /* Build configuration list for PBXNativeTarget "ArgmaxReddyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75A4B437258B6B88009734F4 /* Debug */,

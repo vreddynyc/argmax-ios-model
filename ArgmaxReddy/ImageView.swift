@@ -4,17 +4,17 @@ import CoreML
 import Combine
 
 struct ImageView: View {
-    @ObservedObject var imageLoader: ImageLoader
-    @State var image: UIImage = UIImage()
+    @ObservedObject private var imageLoader: ImageLoader
+    @State private var image: UIImage = UIImage()
     
     @State private var showResultSheet: Bool = false
-    @State var detectedObjects: [Observation] = []
-    @State var faceDetectedText: String = ""
+    @State private var detectedObjects: [Observation] = []
+    @State private var faceDetectedText: String = ""
     
-    var item: Item
-    var index: Int
+    private var item: Item
+    private var index: Int
     
-    let model = try! YOLOv3Int8LUT(configuration: MLModelConfiguration())
+    private let model = try! YOLOv3Int8LUT(configuration: MLModelConfiguration())
     
     init(item: Item, index: Int) {
         self.item = item
