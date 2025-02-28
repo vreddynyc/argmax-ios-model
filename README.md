@@ -2,12 +2,12 @@
 ## iOS Face Detection model
 ## Vijay Reddy
 
-Project that detects faces using on-device model on iOS.  Used SwiftUI 5 and targets iOS 14+
+Project that detects faces using on-device model on iOS.  Used SwiftUI 5 and targets iOS 16+
 
 Project Instructions
 - Download project zip file directly or clone from https://github.com/vreddynyc/argmax-ios-model.git
 - Open project
-- Run on any device running iOS 14+
+- Run on any device running iOS 16+
 
 Runtime Instructions
 - Upon running the app, a list of Stack Overflow Users will show
