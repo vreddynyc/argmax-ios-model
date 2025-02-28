@@ -14,4 +14,5 @@ Runtime Instructions
 - Each list item will show a user name and profile image
 - Below the profile image, a green text will read "Face Detected" if the on-device model detects a faces
 - Click on the profile image to see details
-- The details page will give the model confidence percentage if a face is detected, indicate if no face objects were detected within the detected objects, or if no objects were detected at all.
+- The details page will show the objects detected with respective confidence, or no objects if none were detected
+- A "Face Detected" profile image will have a "person" object with at least 95% confidence
