@@ -41,28 +41,28 @@ struct ImageView: View {
         guard let vnCoreMLModel = try? VNCoreMLModel(for: mlModel) else { return }
         let request = VNCoreMLRequest(model: vnCoreMLModel) { request, error in
             guard let results = request.results as? [VNRecognizedObjectObservation] else { return }
-            let defaults = UserDefaults.standard
+            var objectsResultsText = ""
+            var resultFaceDetected = ""
             results.forEach { result in
                 let label = result.labels.first?.identifier ?? ""
                 let confidence = result.labels.first?.confidence ?? 0.0
-                let faceDetected = (confidence * 100) > 90 && label == "person"
-                let modelDataText: String
-                let confidenceText = String(format:"%.2f", confidence * 100)
-                if (faceDetected) {
-                    faceDetectedText = "Face Detected"
-                    modelDataText = "Face Detected with " + confidenceText + "% confidence"
-                } else {
-                    faceDetectedText = ""
-                    modelDataText = "No Face Detected within Detected Objects"
+                if ((confidence * 100) > 95 && label == "person") {
+                    resultFaceDetected = "Face Detected"
                 }
-                defaults.set(modelDataText, forKey: "key" + String(index))
-                let resultText = "Label: " + label + ", Confidence: " + confidenceText
+                let confidenceText = String(format:"%.2f", confidence * 100)
+                let resultText = "Label: " + label + ", Confidence: " + confidenceText + "\n"
                 print(resultText)
+                objectsResultsText += resultText
             }
+            print(resultFaceDetected)
+            faceDetectedText = resultFaceDetected
+            let defaults = UserDefaults.standard
             if (results.isEmpty) {
                 defaults.set("No Objects were Detected", forKey: "key" + String(index))
+            } else {
+                defaults.set(objectsResultsText, forKey: "key" + String(index))
             }
-            print(faceDetectedText)
+            print(objectsResultsText)
         }
         guard let image = profileImage, let pixelBuffer = convertToCVPixelBuffer(newImage: image) else {
             return
