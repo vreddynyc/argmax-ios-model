@@ -5,7 +5,6 @@ struct ContentView: View {
     
     @State private var itemList: ItemList = ItemList(items: [])
     @State private var showDetailView = false
-        
     @State private var selectedIndex: Int = 0
     
     var body: some View {
