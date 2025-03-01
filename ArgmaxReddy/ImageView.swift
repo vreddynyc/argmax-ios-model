@@ -2,41 +2,48 @@ import SwiftUI
 import Vision
 import CoreML
 import Combine
+import Kingfisher
 
 struct ImageView: View {
-    @ObservedObject private var imageLoader: ImageLoader
     
     @State private var image: UIImage = UIImage()
     @State private var faceDetectedText: String = ""
     
-    private var item: Item
+    private var user: Item
     private var index: Int
     
     private let model = try! YOLOv3Int8LUT(configuration: MLModelConfiguration())
     
     init(item: Item, index: Int) {
-        self.item = item
+        self.user = item
         self.index = index
-        imageLoader = ImageLoader(urlString: item.profile_image)
     }
     
-    var body: some View {
-        Image(uiImage: image)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 100, height: 100)
-            .onReceive(imageLoader.dataPublisher) { data in
-                image = UIImage(data: data) ?? UIImage()
-                DispatchQueue.main.async {
-                    loadImage(profileImage: image)
+    var body: some View {        
+        VStack {
+            KFImage(URL(string: user.profile_image))
+                .onSuccess { result in
+                    print("Image loaded successfully: \(result.cacheType)")
+//                    DispatchQueue.main.async {
+//                        analyzeImage(profileImage: result.image)
+//                    }
                 }
-            }
+                .onFailure { error in
+                    print("Image failed to load: \(error.localizedDescription)")
+                }
+                .onProgress { receivedSize, totalSize in
+                    print("Loading progress: \(receivedSize)/\(totalSize)")
+                }
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
+        }
         
         Text(faceDetectedText)
             .foregroundColor(.green)
     }
     
-    func loadImage(profileImage: UIImage?) {
+    func analyzeImage(profileImage: UIImage?) {
         let mlModel = model.model
         guard let vnCoreMLModel = try? VNCoreMLModel(for: mlModel) else { return }
         let request = VNCoreMLRequest(model: vnCoreMLModel) { request, error in
