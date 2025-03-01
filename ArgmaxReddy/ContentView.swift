@@ -7,15 +7,17 @@ struct ContentView: View {
     @State private var showDetailView = false
     @State private var selectedIndex: Int = 0
     
+    @StateObject var viewModel = ViewModel()
+    
     var body: some View {
         NavigationStack {
             VStack {
                 List {
-                    ForEach(itemList.items.indices, id: \.self) { index in
-                        let item = itemList.items[index]
-                        Text(item.display_name)
+                    ForEach(viewModel.userList.indices, id: \.self) { index in
+                        let user = (viewModel.userList[index])
+                        Text(user.display_name)
                             .font(.headline)
-                        ImageView(item: item, index: index)
+                        ImageView(item: user, index: index)
                             .onTapGesture {
                                 selectedIndex = index
                                 showDetailView = true
@@ -24,9 +26,7 @@ struct ContentView: View {
                             .frame(height: 50)
                     }
                 }.onAppear {
-                    ViewModel().getItems { itemList in
-                        self.itemList = itemList
-                    }
+                    viewModel.getItems()
                 }
             }
             .navigationDestination(isPresented: $showDetailView) {
