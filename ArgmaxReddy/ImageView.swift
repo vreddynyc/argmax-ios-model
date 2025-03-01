@@ -64,10 +64,8 @@ struct ImageView: View {
             }
             print(objectsResultsText)
         }
-        guard let image = profileImage, let pixelBuffer = convertToCVPixelBuffer(newImage: image) else {
-            return
-        }
-        let requestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
+        let pixelBuffer = convertToCVPixelBuffer(newImage: image)
+        let requestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer!)
         do {
             try requestHandler.perform([request])
         } catch {
