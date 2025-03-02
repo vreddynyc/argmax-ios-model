@@ -51,7 +51,6 @@ class ViewModel: ObservableObject {
         let pixelBuffer = convertToCVPixelBuffer(newImage: profileImage)
         let requestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer!)
 
-        
         DispatchQueue.global(qos: .userInitiated).async {
             do {
                 try requestHandler.perform([request])
