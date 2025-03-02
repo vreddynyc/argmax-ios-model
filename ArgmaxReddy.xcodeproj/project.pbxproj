@@ -11,9 +11,9 @@
 		75A4B411258B6B85009734F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B410258B6B85009734F4 /* ContentView.swift */; };
 		75A4B413258B6B87009734F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A4B412258B6B87009734F4 /* Assets.xcassets */; };
 		75A4B416258B6B87009734F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A4B415258B6B87009734F4 /* Preview Assets.xcassets */; };
-		75A4B43D258B6EE7009734F4 /* itemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B43C258B6EE7009734F4 /* itemModel.swift */; };
+		75A4B43D258B6EE7009734F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B43C258B6EE7009734F4 /* User.swift */; };
 		75A4B442258B708D009734F4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4B441258B708D009734F4 /* ViewModel.swift */; };
-		96D42C752D6EC27800DACFE1 /* itemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D42C742D6EC27800DACFE1 /* itemListModel.swift */; };
+		96D42C752D6EC27800DACFE1 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D42C742D6EC27800DACFE1 /* UserList.swift */; };
 		96D42C772D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 96D42C762D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel */; };
 		96D42C832D71E35E00DACFE1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D42C822D71E35E00DACFE1 /* DetailView.swift */; };
 		96ECD3D62D73B6F1008F5E57 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 96ECD3D52D73B6F1008F5E57 /* Kingfisher */; };
@@ -45,9 +45,9 @@
 		75A4B417258B6B87009734F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A4B41C258B6B88009734F4 /* ArgmaxReddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgmaxReddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4B427258B6B88009734F4 /* ArgmaxReddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgmaxReddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75A4B43C258B6EE7009734F4 /* itemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemModel.swift; sourceTree = "<group>"; };
+		75A4B43C258B6EE7009734F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		75A4B441258B708D009734F4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		96D42C742D6EC27800DACFE1 /* itemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListModel.swift; sourceTree = "<group>"; };
+		96D42C742D6EC27800DACFE1 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		96D42C762D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3Int8LUT.mlmodel; path = ../../../../../Downloads/YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
 		96D42C822D71E35E00DACFE1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,8 +104,8 @@
 				75A4B410258B6B85009734F4 /* ContentView.swift */,
 				96D42C822D71E35E00DACFE1 /* DetailView.swift */,
 				75A4B441258B708D009734F4 /* ViewModel.swift */,
-				75A4B43C258B6EE7009734F4 /* itemModel.swift */,
-				96D42C742D6EC27800DACFE1 /* itemListModel.swift */,
+				75A4B43C258B6EE7009734F4 /* User.swift */,
+				96D42C742D6EC27800DACFE1 /* UserList.swift */,
 				75A4B412258B6B87009734F4 /* Assets.xcassets */,
 				75A4B417258B6B87009734F4 /* Info.plist */,
 				75A4B414258B6B87009734F4 /* Preview Content */,
@@ -259,8 +259,8 @@
 				75A4B442258B708D009734F4 /* ViewModel.swift in Sources */,
 				75A4B40F258B6B85009734F4 /* ArgmaxReddy.swift in Sources */,
 				96D42C772D7018E500DACFE1 /* YOLOv3Int8LUT.mlmodel in Sources */,
-				96D42C752D6EC27800DACFE1 /* itemListModel.swift in Sources */,
-				75A4B43D258B6EE7009734F4 /* itemModel.swift in Sources */,
+				96D42C752D6EC27800DACFE1 /* UserList.swift in Sources */,
+				75A4B43D258B6EE7009734F4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

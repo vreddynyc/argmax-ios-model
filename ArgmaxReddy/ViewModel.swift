@@ -6,15 +6,15 @@ import Combine
 @MainActor
 class ViewModel: ObservableObject {
     
-    @Published var userList: [Item] = []
+    @Published var userList: [User] = []
     @Published var modelResultMap: [Int: [String]] = [:]
     
-    private var model = try! YOLOv3Int8LUT(configuration: MLModelConfiguration())
+    private let model = try! YOLOv3Int8LUT(configuration: MLModelConfiguration())
     
-    func getItems() {
+    func getUsers() {
         guard let url = URL(string: "https://api.stackexchange.com/2.2/users?site=stackoverflow") else { return }
         URLSession.shared.dataTask(with: url) { (data, _, _) in
-            let itemList = try! JSONDecoder().decode(ItemList.self, from: data!)
+            let itemList = try! JSONDecoder().decode(UserList.self, from: data!)
             print(itemList)
             
             DispatchQueue.main.async {
@@ -29,23 +29,22 @@ class ViewModel: ObservableObject {
         guard let vnCoreMLModel = try? VNCoreMLModel(for: mlModel) else { return }
         let request = VNCoreMLRequest(model: vnCoreMLModel) { request, error in
             guard let results = request.results as? [VNRecognizedObjectObservation] else { return }
-            var resultFaceDetected = ""
+            var faceDetectedText = ""
             var objectsResultsText = ""
             results.forEach { result in
                 let label = result.labels.first?.identifier ?? ""
                 let confidence = result.labels.first?.confidence ?? 0.0
                 if ((confidence * 100) > 95 && label == "person") {
-                    resultFaceDetected = "Face Detected"
+                    faceDetectedText = "Face Detected"
                 }
                 let confidenceText = String(format:"%.2f", confidence * 100)
                 let resultText = "Label: " + label.capitalized + ", Confidence: " + confidenceText + "%\n"
-                print(resultText)
                 objectsResultsText += resultText
             }
-            print(resultFaceDetected)
+            print(faceDetectedText)
             print(objectsResultsText)
             DispatchQueue.main.async {
-                self.modelResultMap[index] = [resultFaceDetected, objectsResultsText]
+                self.modelResultMap[index] = [faceDetectedText, objectsResultsText]
             }
         }
         let pixelBuffer = convertToCVPixelBuffer(newImage: profileImage)

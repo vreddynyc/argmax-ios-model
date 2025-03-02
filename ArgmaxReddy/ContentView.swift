@@ -39,7 +39,7 @@ struct ContentView: View {
                             .frame(height: 50)
                     }
                 }.onAppear {
-                    viewModel.getItems()
+                    viewModel.getUsers()
                 }
             }
             .navigationDestination(isPresented: $showDetailView) {
