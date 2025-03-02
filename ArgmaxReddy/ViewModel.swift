@@ -38,7 +38,7 @@ class ViewModel: ObservableObject {
                     resultFaceDetected = "Face Detected"
                 }
                 let confidenceText = String(format:"%.2f", confidence * 100)
-                let resultText = "Label: " + label + ", Confidence: " + confidenceText + "\n"
+                let resultText = "Label: " + label.capitalized + ", Confidence: " + confidenceText + "%\n"
                 print(resultText)
                 objectsResultsText += resultText
             }
