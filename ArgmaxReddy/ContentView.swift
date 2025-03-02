@@ -1,11 +1,11 @@
 import SwiftUI
+import Kingfisher
 
 @available(iOS 16.0, *)
 struct ContentView: View {
         
-    @State private var itemList: ItemList = ItemList(items: [])
-    @State private var showDetailView = false
     @State private var selectedIndex: Int = 0
+    @State private var showDetailView = false
     
     @StateObject var viewModel = ViewModel()
     
@@ -15,13 +15,34 @@ struct ContentView: View {
                 List {
                     ForEach(viewModel.userList.indices, id: \.self) { index in
                         let user = (viewModel.userList[index])
+                        
                         Text(user.display_name)
                             .font(.headline)
-                        ImageView(item: user, index: index)
+                        
+                        KFImage(URL(string: user.profile_image))
+                            .onSuccess { result in
+                                print("Image loaded successfully: \(result.cacheType)")
+                            }
+                            .onFailure { error in
+                                print("Image failed to load: \(error.localizedDescription)")
+                            }
+                            .onProgress { receivedSize, totalSize in
+                                print("Loading progress: \(receivedSize)/\(totalSize)")
+                            }
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 120, height: 120)
                             .onTapGesture {
                                 selectedIndex = index
                                 showDetailView = true
                             }
+                    
+//                        ImageView(item: user, index: index)
+//                            .onTapGesture {
+//                                selectedIndex = index
+//                                showDetailView = true
+//                            }
+                        
                         Spacer()
                             .frame(height: 50)
                     }
