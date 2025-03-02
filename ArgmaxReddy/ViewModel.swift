@@ -7,6 +7,7 @@ import Combine
 class ViewModel: ObservableObject {
     
     @Published var userList: [Item] = []
+    @Published var modelResultMap: [Int: [String]] = [:]
     
     private var model = try! YOLOv3Int8LUT(configuration: MLModelConfiguration())
     
@@ -23,13 +24,13 @@ class ViewModel: ObservableObject {
         .resume()
     }
     
-    func analyzeImage(profileImage: UIImage, completion: @escaping (String) -> ()) {
+    func analyzeImage(index: Int, profileImage: UIImage) {
         let mlModel = model.model
         guard let vnCoreMLModel = try? VNCoreMLModel(for: mlModel) else { return }
         let request = VNCoreMLRequest(model: vnCoreMLModel) { request, error in
             guard let results = request.results as? [VNRecognizedObjectObservation] else { return }
-            var objectsResultsText = ""
             var resultFaceDetected = ""
+            var objectsResultsText = ""
             results.forEach { result in
                 let label = result.labels.first?.identifier ?? ""
                 let confidence = result.labels.first?.confidence ?? 0.0
@@ -44,7 +45,7 @@ class ViewModel: ObservableObject {
             print(resultFaceDetected)
             print(objectsResultsText)
             DispatchQueue.main.async {
-                completion(objectsResultsText)
+                self.modelResultMap[index] = [resultFaceDetected, objectsResultsText]
             }
         }
         let pixelBuffer = convertToCVPixelBuffer(newImage: profileImage)
