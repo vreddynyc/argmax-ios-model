@@ -22,6 +22,9 @@ struct ContentView: View {
                         KFImage(URL(string: user.profile_image))
                             .onSuccess { result in
                                 print("Image loaded successfully: \(result.cacheType)")
+                                viewModel.analyzeImage(profileImage: result.image) { objectsResultsText in
+                                    print("Image callback: " + objectsResultsText)
+                                }
                             }
                             .onFailure { error in
                                 print("Image failed to load: \(error.localizedDescription)")
@@ -36,12 +39,6 @@ struct ContentView: View {
                                 selectedIndex = index
                                 showDetailView = true
                             }
-                    
-//                        ImageView(item: user, index: index)
-//                            .onTapGesture {
-//                                selectedIndex = index
-//                                showDetailView = true
-//                            }
                         
                         Spacer()
                             .frame(height: 50)
