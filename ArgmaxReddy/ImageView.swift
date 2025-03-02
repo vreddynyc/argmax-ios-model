@@ -24,9 +24,6 @@ struct ImageView: View {
             KFImage(URL(string: user.profile_image))
                 .onSuccess { result in
                     print("Image loaded successfully: \(result.cacheType)")
-//                    DispatchQueue.main.async {
-//                        analyzeImage(profileImage: result.image)
-//                    }
                 }
                 .onFailure { error in
                     print("Image failed to load: \(error.localizedDescription)")
@@ -36,7 +33,7 @@ struct ImageView: View {
                 }
                 .resizable()
                 .scaledToFit()
-                .frame(width: 200, height: 200)
+                .frame(width: 120, height: 120)
         }
         
         Text(faceDetectedText)
