@@ -14,5 +14,8 @@ Runtime Instructions
 - Each list item will show a user name and profile image
 - Below the profile image, a green text will read "Face Detected" if the on-device model detects a faces
 - Click on the profile image to see details
-- The details page will show the objects detected with respective confidence, or no objects if none were detected
-- A "Face Detected" profile image will have a "person" object with at least 95% confidence
+- The details page will show the objects detected with labels and respective confidence
+- A "Face Detected" profile image will have a "person" label with a confidence of at least 95%
+
+Third-Party Libraries
+- Used Kingfisher to display images. Also provides a callback to run model analysis on successful image load
