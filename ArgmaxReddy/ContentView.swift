@@ -15,25 +15,26 @@ struct ContentView: View {
                 List {
                     ForEach(viewModel.userList.indices, id: \.self) { index in
                         let user = viewModel.userList[index]
-                        
-                        Text(user.display_name)
+                        Text(user.display_name.capitalized)
                             .font(.headline)
-                        
-                        KFImage(URL(string: user.profile_image))
-                            .onSuccess { result in
-                                viewModel.analyzeImage(index: index, profileImage: result.image)
+                        VStack {
+                            HStack {
+                                KFImage(URL(string: user.profile_image))
+                                    .onSuccess { result in
+                                        viewModel.analyzeImage(index: index, profileImage: result.image)
+                                    }
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 120, height: 120)
+                                Spacer()
+                                    .frame(width: 20)
+                                Text((viewModel.modelResultMap[index] ?? []).first ?? "")
+                                    .foregroundColor(.green)
                             }
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 120, height: 120)
-                            .onTapGesture {
-                                selectedIndex = index
-                                showDetailView = true
-                            }
-                        
-                        Text((viewModel.modelResultMap[index] ?? []).first ?? "")
-                            .foregroundColor(.green)
-                        
+                        }.onTapGesture {
+                            selectedIndex = index
+                            showDetailView = true
+                        }
                         Spacer()
                             .frame(height: 50)
                     }
