@@ -21,14 +21,7 @@ struct ContentView: View {
                         
                         KFImage(URL(string: user.profile_image))
                             .onSuccess { result in
-                                print("Image loaded successfully: \(result.cacheType)")
                                 viewModel.analyzeImage(index: index, profileImage: result.image)
-                            }
-                            .onFailure { error in
-                                print("Image failed to load: \(error.localizedDescription)")
-                            }
-                            .onProgress { receivedSize, totalSize in
-                                print("Loading progress: \(receivedSize)/\(totalSize)")
                             }
                             .resizable()
                             .scaledToFit()
