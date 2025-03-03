@@ -7,7 +7,10 @@ Project that detects faces using on-device model on iOS.  Used SwiftUI 5 and tar
 Project Instructions
 - Download project zip file directly or clone from https://github.com/vreddynyc/argmax-ios-model.git
 - Open project
-- Run on any device running iOS 16+
+- Download the Face Detection model (YOLOv3Int8LUT.mlmodel) in the YOLOv3 section (bottom of page) at
+  https://developer.apple.com/machine-learning/models/
+- Copy Face Detection model into the project folder, and delete the old reference
+- Run project on any device running iOS 16+
 
 Runtime Instructions
 - Upon running the app, a list of Stack Overflow Users will show
