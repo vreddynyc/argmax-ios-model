@@ -15,7 +15,7 @@ Runtime Instructions
 - Below the profile image, a green text will read "Face Detected" if the on-device model detects a faces
 - Click on the profile image to see details
 - The details page will show the objects detected with labels and respective confidence
-- A "Face Detected" profile image will have a "person" label with a confidence of at least 95%
+- A "Face Detected" profile image will have an object with a "person" label and a confidence of at least 95%
 
 Third-Party Libraries
 - Used Kingfisher to display images. Also provides a callback to run model analysis on successful image load

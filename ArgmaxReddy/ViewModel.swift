@@ -30,16 +30,20 @@ class ViewModel: ObservableObject {
         let request = VNCoreMLRequest(model: vnCoreMLModel) { request, error in
             guard let results = request.results as? [VNRecognizedObjectObservation] else { return }
             var faceDetectedText = ""
-            var objectsResultsText = ""
-            results.forEach { result in
-                let label = result.labels.first?.identifier ?? ""
-                let confidence = result.labels.first?.confidence ?? 0.0
-                if ((confidence * 100) > 95 && label == "person") {
-                    faceDetectedText = "Face Detected"
+            var objectsResultsText = "Detected Objects:\n"
+            if (results.isEmpty) {
+                objectsResultsText += "<No Objects detected in Model>"
+            } else {
+                results.forEach { result in
+                    let label = result.labels.first?.identifier ?? ""
+                    let confidence = result.labels.first?.confidence ?? 0.0
+                    if ((confidence * 100) > 95 && label == "person") {
+                        faceDetectedText = "Face Detected"
+                    }
+                    let confidenceText = String(format:"%.2f", confidence * 100)
+                    let resultText = "Label: " + label.capitalized + ", Confidence: " + confidenceText + "%\n"
+                    objectsResultsText += resultText
                 }
-                let confidenceText = String(format:"%.2f", confidence * 100)
-                let resultText = "Label: " + label.capitalized + ", Confidence: " + confidenceText + "%\n"
-                objectsResultsText += resultText
             }
             print(faceDetectedText)
             print(objectsResultsText)
